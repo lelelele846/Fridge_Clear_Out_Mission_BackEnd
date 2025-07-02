@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: BackEnd
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Breeze029!
+    url: jdbc:mysql://localhost:3306/fridge_missiondb
+
+mybatis:
+  mapper-locations: classpath:com.example.backend.mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+vivo:
+  ai:
+    app-id: 2025303656       # 从vivo AIGC官网获取
+    app-key: kcpnSmTdTrhEHlNy     # 从vivo AIGC官网获取
+    model-name: vivo-BlueLM-TB-Pro   # 可选，默认值已在类中设置
+    temperature: 0.9                 # 可选，默认值已在类中设置
+    max-tokens: 4096                  # 可选，默认值已在类中设置
+    image-model-name: BlueLM-Vision-prd
+
+aliyun:
+  oss:
+    endpoint: https://oss-cn-beijing.aliyuncs.com
+    bucketName: f-java-web01
+    region: cn-beijing
+
+#logging:
+#  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
