@@ -25,8 +25,8 @@ public class GetFoodNutritionByNameStrategy implements PromptStrategy{
                 "蛋白质(g/500g):xx.xx\n" +
                 "脂肪(g/500g):xx.xx\n" +
                 "表情符号:🍎\n";
-                //+
-                //"保质期(天):xx";
+        //+
+        //"保质期(天):xx";
     }
 
     @Override
@@ -49,8 +49,8 @@ public class GetFoodNutritionByNameStrategy implements PromptStrategy{
             } else if (line.startsWith("脂肪(g/500g):")) {
                 food.setFat(parseDouble(line, 11));
             } //else if (line.startsWith("保质期(天):")) {
-             //   food.setExpiryDuration(parseInt(line, 7));
-           //}
+            //   food.setExpiryDuration(parseInt(line, 7));
+            //}
         }
         // 设置默认值
         if (food.getEmoji() == null || food.getEmoji().isEmpty()) {
